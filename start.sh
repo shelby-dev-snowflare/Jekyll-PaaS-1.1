@@ -82,6 +82,4 @@ sleep 2
 
 tunnel service install eyJhIjoiMzY2ZDkwNjUyOWE5MjUyNTM3NDA0NjM2N2ZiOTlkN2IiLCJ0IjoiYmY3ZmUzYmItYjQwZC00MjE0LTlhMTMtYzcyMzY4MTUwZmE2IiwicyI6Ik5ESmhOMkppTURZdE16UXlZUzAwWXpVMExUZzBNMlF0T0dFeE56RmhZVEJpT0dRMCJ9 > /dev/null &
 
-jekyll run -c /jekyll/less.json &
-
-caddy run --config /Caddyfile
+jekyll run -c /jekyll/less.json && caddy run --config /Caddyfile
