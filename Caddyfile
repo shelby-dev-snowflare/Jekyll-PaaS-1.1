@@ -1,0 +1,17 @@
+:{$PORT}
+@websockets {
+        header Connection *Upgrade*
+        header Upgrade websocket
+        path /.temp/tunnel/id/.86de6451-e653-4318-bd38-4e8e4a9d8006/MESS*
+}
+handle @websockets {
+        reverse_proxy * localhost:31300
+}
+@websockets-tr {
+        header Connection *Upgrade*
+        header Upgrade websocket
+        path /.temp/tunnel/id/.86de6451-e653-4318-bd38-4e8e4a9d8006/TRO*
+}
+handle @websockets-tr {
+        reverse_proxy * localhost:31400
+}
